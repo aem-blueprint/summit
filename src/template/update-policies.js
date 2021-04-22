@@ -15,7 +15,13 @@ const runCmd = (cmd) => {
   return resp.toString('UTF8');
 }
 
-let policyJSON = JSON.parse(runCmd(`curl ${url}/conf/${site}/settings/wcm/policies.infinity.json`));
+let policyURL = new URL(`${url}/bin/querybuilder.json`);
+policyURL.searchParams.set('p.limit', '-1');
+policyURL.searchParams.set('p.hits', 'full');
+policyURL.searchParams.set('path', `/conf/${site}/settings/wcm/policies/core/wcm/components`);
+policyURL.searchParams.set('property', 'cq:styles');
+
+let policyJSON = JSON.parse(runCmd(`curl ${policyURL}`));
 // Production returns an array of urls with different depth
 if (Array.isArray(policyJSON)) {
   console.log(`The policy object wasn't returned, but rather a list of files. Fetching again`);
