@@ -1,0 +1,3 @@
+@layer components {
+  #logos-1 > .container, #logos-2 > .container { @apply h-[100px]; }
+}

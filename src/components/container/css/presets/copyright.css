@@ -1,0 +1,7 @@
+@layer components {
+  #copyright .cmp-text { 
+    --color-fill-accent: var(--color-text);
+    --color-fill-accent-hover: var(--color-text-hover);
+    @apply text-xs max-w-none; 
+  }
+}

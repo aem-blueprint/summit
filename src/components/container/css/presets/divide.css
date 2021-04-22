@@ -1,0 +1,9 @@
+@layer components {
+  .container--preset\:divide > .cmp-container { @apply relative; }
+  .container--preset\:divide > .cmp-container > * + *:before {
+    @apply w-[2px] h-20 block absolute bottom-1/2;
+    content: '';
+    transform: translateY(calc(50% + 2rem));
+    background-color: theme('colors.light.primary.fill');
+  }
+}

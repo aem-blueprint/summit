@@ -1,0 +1,30 @@
+@layer components {
+  .container--preset\:hero > .cmp-container { @apply min-h-[800px] flex justify-start py-8 px-6; }
+  @screen md {
+    .container--preset\:hero > .cmp-container { @apply justify-center p-0; }
+  }
+
+  #homepage-hero { 
+    background-size: 125%  !important; 
+    background-position: calc(100% + 100px) 100%;
+
+    @screen md { background-position: 0; background-size: cover  !important; }
+    @screen lg { background-position: 200px; }
+
+    .teaser { @apply m-0 max-w-[700px]; }
+
+    .cmp-teaser__pretitle { @apply font-semibold; }
+    .cmp-teaser__title { @apply my-2 text-4xl; }
+    .cmp-teaser__action-container { @apply mt-2; }
+
+    .cmp-teaser__action-link { 
+      @apply text-xs duration-500 border-2; 
+      --color-fill-accent: white;
+    }
+
+    .cmp-teaser__action-link:hover { 
+      --color-fill-accent-hover: theme('colors.light.primary.fill');
+      --color-fill-hover: white;
+    }
+  }
+}

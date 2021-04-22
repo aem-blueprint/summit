@@ -1,0 +1,8 @@
+@layer components {
+  .teaser--preset\:section-header .cmp-teaser__title::after {
+    @apply block w-8 h-1 my-4;
+    content: "";
+    background-color: theme('colors.light.primary.fill');
+  }
+  .teaser--preset\:section-header .cmp-teaser__description { @apply prose; }
+}

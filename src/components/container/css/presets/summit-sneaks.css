@@ -1,0 +1,6 @@
+@layer components {
+  #summit-sneaks { @apply relative; }
+  #summit-sneaks .cmp-image__image { @apply w-auto ml-6; }
+  #summit-sneaks-floating-image { @apply block absolute top-[-35px] right-[24px] w-[130px]; }
+  #summit-sneaks-bio { @apply absolute bottom-[105px] right-0 max-w-[223px]; }
+}

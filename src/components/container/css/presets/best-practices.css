@@ -1,0 +1,6 @@
+@layer components {
+  #best-practices {
+    --color-text: white;
+  }
+  #best-practices .cmp-teaser__description { color: white; }
+}

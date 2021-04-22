@@ -1,0 +1,26 @@
+@layer components {
+  #root > .header { @apply sticky top-0; }
+  #masthead { @apply border-b; }
+
+  .container.container\:navbar {
+    > .cmp-container {
+      @apply flex flex-wrap items-center;
+    }
+
+    @screen sm { 
+      > .cmp-container { @apply justify-between; }
+    }
+
+    #logo { @apply flex space-x-2; }
+    #logo .cmp-image__image { @apply w-auto; }
+    #logo .cmp-image__title { 
+      @apply font-semibold; 
+      color: theme('colors.light.primary.fill'); 
+    }
+  }
+
+  .no-flex-gap .container.container\:navbar .image { margin-right: var(--gap); }
+  @screen sm {
+    .container.container\:navbar .image { @apply max-w-[170px]; }
+  }
+}

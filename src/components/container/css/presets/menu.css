@@ -1,0 +1,6 @@
+@layer components {
+  #menu { @apply flex-col space-y-4; }
+  @screen lg { 
+    #menu { @apply flex-row space-y-0; }
+  }
+}

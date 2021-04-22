@@ -1,0 +1,5 @@
+@layer components {
+  #mailing-list { --color-fill-accent: rgb(235,235,235); --color-fill-accent-hover: rgb(255,255,255); }
+  #mailing-list .cmp-text { @apply text-xs; }
+  #mailing-list .cmp-form-button { @apply px-3 text-sm; }
+}
