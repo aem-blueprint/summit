@@ -1,8 +1,8 @@
 @layer utilities {
-  div[class*=container--grid-cols] > .cmp-container {
-    @apply grid grid-cols-1; 
+  div[class*=container--grid-cols] > .cmp-container { @apply grid grid-cols-1; }
 
-    @screen md {
+  @screen smd {
+    div[class*=container--grid-cols] > .cmp-container {
       grid-template-columns: var(--grid-template-columns);
     }
   }

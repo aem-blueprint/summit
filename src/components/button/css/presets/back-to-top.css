@@ -1,0 +1,4 @@
+@layer components {
+  #copyright .button { @apply flex-shrink-0; }
+  #back-to-top { @apply whitespace-nowrap; }
+}

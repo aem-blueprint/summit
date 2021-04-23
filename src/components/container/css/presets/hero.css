@@ -1,7 +1,10 @@
 @layer components {
-  .container--preset\:hero > .cmp-container { @apply min-h-[800px] flex justify-start py-8 px-6; }
-  @screen md {
-    .container--preset\:hero > .cmp-container { @apply justify-center p-0; }
+  .container--preset\:hero > .cmp-container { @apply min-h-[600px] flex justify-start py-8 px-6; }
+  @screen smd {
+    .container--preset\:hero > .cmp-container { @apply min-h-[700px]; }
+  }
+  @screen lg { 
+    .container--preset\:hero > .cmp-container { @apply min-h-[800px] justify-center p-0; }
   }
 
   #homepage-hero { 

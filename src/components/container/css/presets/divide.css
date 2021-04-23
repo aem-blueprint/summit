@@ -1,9 +1,20 @@
 @layer components {
   .container--preset\:divide > .cmp-container { @apply relative; }
   .container--preset\:divide > .cmp-container > * + *:before {
-    @apply w-[2px] h-20 block absolute bottom-1/2;
+    @apply w-full h-[2px] block absolute top-0;
     content: '';
-    transform: translateY(calc(50% + 2rem));
     background-color: theme('colors.light.primary.fill');
+  }
+  @screen smd {
+    .container--preset\:divide > .cmp-container > * + *:before {
+      @apply w-[2px] h-20 bottom-1/2;
+      content: '';
+      transform: translateY(calc(50% + 2rem));
+    }
+  }
+
+  .container--preset\:divide .teaser { --padding: 2rem; }
+  @screen md {
+    .container--preset\:divide .teaser { --padding: 4rem; }
   }
 }

@@ -1,0 +1,6 @@
+@layer components {
+  @screen sm {
+    #footer .container.var\:grid-cols-4 > .cmp-container { @apply grid-cols-2; }
+    #copyright { --flex-direction: column; --gap: 1rem; }
+  }
+}

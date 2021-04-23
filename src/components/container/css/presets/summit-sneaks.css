@@ -1,6 +1,9 @@
 @layer components {
-  #summit-sneaks { @apply relative; }
-  #summit-sneaks .cmp-image__image { @apply w-auto ml-6; }
-  #summit-sneaks-floating-image { @apply block absolute top-[-35px] right-[24px] w-[130px]; }
-  #summit-sneaks-bio { @apply absolute bottom-[105px] right-0 max-w-[223px]; }
+  #summit-sneaks { @apply relative p-4 smd:pb-0; }
+  #summit-sneaks > .container { --grid-template-columns: 1fr; }
+  @screen lg { #summit-sneaks > .container { --grid-template-columns: 33% 66%; } }
+  @screen smd { #summit-sneaks .cmp-image__image { @apply w-auto max-w-[70%]; } }
+  @screen md { #summit-sneaks .cmp-image__image { @apply max-w-full; } }
+  #summit-sneaks-floating-image { @apply block absolute top-[-35px] right-[24px] w-[80px] smd:w-[130px]; }
+  @screen smd { #summit-sneaks-bio { @apply absolute bottom-[105px] text-left right-0 max-w-[223px]; } }
 }

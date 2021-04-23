@@ -1,0 +1,7 @@
+@layer components {
+  @screen sm {
+    #summit-speakers .separator { --padding-top: 2rem; --padding-bottom: 2rem; }
+    #summit-speakers-grid > .teaser { --padding: 3rem; }
+    #summit-speakers-grid .container--grid-cols\:2 > .cmp-container  { @apply grid-cols-2; }
+  }
+}
